@@ -1,4 +1,7 @@
 .header {
+    display: flex; /* deixa o bloco flexivel*/
+    align-items: center; /* alinha os elementos na vertical */
+    gap: 20px; /* espacamento que so funciona com display flex ativo */
     position: fixed;/* define a posicao */
     top: 0; /* fica preso no top */
     left: 0; /* fica preso no top */
@@ -6,19 +9,32 @@
     height: 60px; /* define a altura */
     background-color: var(--verde-claro); /* define a cor do plano de fundo*/
     color: var(--preto); /* define a cor da letra */
-    display: flex; /* deixa o bloco flexivel*/
-    justify-content: space-between;
-    align-items: center; /* alinha os elementos na vertical */
     padding: 15px 30px; /* defne espaco interno ao bloco */ 
     z-index: 1000; /* controla a ordem de empilhamento dos elementos na tela ou seja quem fica por cima de quem*/
 }
 
+.header-main {
+    display: flex; /* deixa o bloco flexivel*/
+    width: inherit; /* deixa no tamanho do elemento pai */
+    align-items: center; /* alinha os elementos na vertical */
+    justify-content: space-between; /* deixa separado um em cada quanto */
+}
+
 .menu .menu-lista {
-    display: flex;
-    gap: 20px;
+    display: flex; /* deixa o bloco flexivel*/
+    gap: 20px; /* espacamento que so funciona com display flex ativo */
     color: var(--branco);
 }
 
+/* deixa o menu ativo e na vertical quando esta em desktop, chata pra caralho pprt */
+.menu-mobile .menu-lista {
+    display: flex; /* deixa o bloco flexivel*/
+    flex-direction: column; /* deixa em colunsd (vertical) */
+    gap: 20px; /* espacamento que so funciona com display flex ativo */
+    color: var(--branco);
+}
+
+/* efeito de transicao */
 .menu .menu-lista a {
     transition: ease-out 0.3s;
 }
@@ -30,12 +46,13 @@
 
 /* menu mobile */
 .btn-menu-header {
-    display: none;
+    /* display: none; */
     font-size: 1.8em;
     cursor: pointer;
     background: none;
     border: none;
     color: white;
+    padding: none;
 }
 
 .overlay {
@@ -51,15 +68,12 @@
 
 .menu-mobile {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: -250px;
     width: 250px;
-    height: 100%;
+    height: calc(100vh - 60px);
     background-color: var(--verde-escuro);
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     transition: left 0.3s;
     z-index: 1000;
     overflow-y: auto;
@@ -75,11 +89,19 @@
     left: 0;
 }
 
+/* .sections {
+  transition: transform 0.3s ease;
+}
+
+.menu-mobile.open ~ .sections {
+  transform: translateX(250px);
+} */
+
 .overlay.show {
     display: block;
 }
 
-/* Responsivo */
+/* menu responsivo */
 @media (max-width: 768px) {
     .menu-desktop {
         display: none;
@@ -93,7 +115,17 @@
         display: flex;
         flex-direction: column;
     }
+
+    /* .menu-mobile.open ~ .sections {
+        transform: translateX(20%);
+    } */
 }
+
+/* @media (max-width: 768px) {
+  .menu-mobile.open ~ .sections {
+    transform: translateX(75%);
+  }
+} */
 
 /* esconde menu mobile no desktop */
 /* @media (min-width: 769px) {
