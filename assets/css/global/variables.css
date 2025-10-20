@@ -1,0 +1,14 @@
+/* criando variaveis */
+:root {
+    /* fonts */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+
+    /* cores */
+    --verde-claro: #48c1a1;
+    --verde-escuro: #2e7d6a;
+    --branco: #ffffff;
+    --fundo: #f5f9f6;
+    --preto: #000000;
+    --cinza-claro: #e0e0e0;
+}

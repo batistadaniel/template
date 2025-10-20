@@ -1,0 +1,27 @@
+@import "../../global/global.css";
+@import "./partials/header.css";
+@import "./partials/main.css";
+@import "./partials/footer.css";
+@import "./partials/section-um.css";
+@import "./partials/section-dois.css";
+@import "./partials/section-tres.css";
+@import "./partials/section-quatro.css";
+
+
+* {
+    font-family: var(--font-primary);
+} 
+html {
+    scroll-behavior: smooth;
+}
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */

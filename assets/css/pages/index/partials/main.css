@@ -1,0 +1,40 @@
+.main {
+    margin-top: 60px; /* anula o tamanho do header */
+}
+
+/* chato pra caralho arrumar isso aqui pra ficar certo, perdi meia hora da minha vida nessa poha sfd */
+.main .main-section {
+  width: 100%; /* define a largura */
+  height: 100vh; /* define a altura */
+  display: flex; /* deixa o bloco flexivel*/
+  scroll-margin-top: 60px; /* tbm anula o tamanho do header e faz rolar para o lugar certo*/
+  color: var(--branco);
+  padding: 30px;
+  font-size: 32px; /* tamanho da fonte */
+  font-weight: bold; /* grossura da fonte */
+}
+
+/* cores diferentes para cada secao */
+.main-section:nth-child(1) {
+  background-color: #1d201f; 
+}
+
+.main-section:nth-child(2) {
+  background-color: #de4ea9; 
+}
+
+.main-section:nth-child(3) {
+  background-color: #3b82f6; 
+}
+
+.main-section:nth-child(4) {
+  background-color: #f59e0b; 
+}
+
+.main-section:nth-child(5) {
+  background-color: #10b981; 
+}
+
+.main-section:nth-child(6) {
+  background-color: #9333ea; 
+}

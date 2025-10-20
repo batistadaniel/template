@@ -1,0 +1,36 @@
+/* arquivo normalize.css reseta todo o css do projeto */
+* {
+    margin: 0; /* zera a margin */
+    padding: 0; /* zera o padding */
+    box-sizing: border-box;
+    text-decoration: none; /* remove a linha debaixo do link */
+    list-style-type: none; /* remove a droga da bolinha da lista */
+
+}
+
+/* links com efeitos */
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: inherit; /* herda a cor do elemento pai */
+    outline: none; /* remove contorno ao clicar */
+}
+
+/* listas */
+ul,
+ol {
+  list-style: none; /* remove qualquer marcador */
+}
+
+/* elementos de formularios */
+input,
+textarea,
+select,
+button {
+  font: inherit; /* usa a mesma fonte do elemento pai */
+  color: inherit; 
+  background: none;
+  border: none;
+  outline: none;
+}

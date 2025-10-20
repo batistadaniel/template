@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoVibe - Sustentabilidade e Vida Verde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde-claro: #48c1a1;
+      --verde-escuro: #2e7d6a;
+      --fundo: #f5f9f6;
+      --texto: #333;
+      --cinza-claro: #e0e0e0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--verde-escuro);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5em;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* Menu Mobile */
+    .menu-btn {
+      display: none;
+      font-size: 1.8em;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      z-index: 900;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: var(--verde-escuro);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: left 0.3s;
+      z-index: 1000;
+    }
+
+    .side-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .side-menu.open {
+      left: 0;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--verde-escuro);
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--cinza-claro);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    footer {
+      background-color: var(--verde-escuro);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .menu-btn {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EcoVibe</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#dicas">Dicas</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn">☰</button>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="side-menu" id="side-menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#dicas">Dicas</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </div>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre</h2>
+      <p>Na <strong>EcoVibe</strong>, acreditamos que cada gesto conta. 
+        Reduzir o desperdício, reciclar corretamente e optar por escolhas conscientes 
+        são atitudes que, juntas, criam um impacto real no planeta.
+        Nosso objetivo é inspirar pessoas a viverem de forma mais leve e sustentável.</p>
+    </section>
+
+    <section id="dicas">
+      <h2>Pequenas atitudes, grandes mudanças</h2>
+      <div class="cards">
+        <div class="card">🌿 <strong>Leve sua própria garrafa</strong><br>Reduz o uso de plástico.</div>
+        <div class="card">💡 <strong>Prefira luz natural</strong><br>Economize energia e viva melhor.</div>
+        <div class="card">🍃 <strong>Composte restos orgânicos</strong><br>Transforme lixo em vida.</div>
+        <div class="card">🚲 <strong>Use transporte alternativo</strong><br>Reduza a emissão de CO₂.</div>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2>Nossos Projetos</h2>
+      <p>Apoiamos comunidades e empresas que promovem a sustentabilidade.
+        De hortas urbanas a programas de reciclagem, cada projeto é uma semente para um futuro mais verde.</p>
+    </section>
+
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <p>Quer colaborar ou saber mais? Envie uma mensagem e junte-se ao movimento EcoVibe!</p>
+      <p><strong>Email:</strong> contato@ecovibe.com</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/eco.vibe" target="_blank">@eco.vibe</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 EcoVibe. Todos os direitos reservados.</p>
+    <p>Criado com propósito e amor pela natureza 🌎</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const sideMenu = document.getElementById('side-menu');
+    const overlay = document.getElementById('overlay');
+
+    menuBtn.addEventListener('click', () => {
+      sideMenu.classList.toggle('open');
+      overlay.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', () => {
+      sideMenu.classList.remove('open');
+      overlay.classList.remove('show');
+    });
+
+    document.querySelectorAll('.side-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove('open');
+        overlay.classList.remove('show');
+      });
+    });
+  </script>
+
+</body>
+</html>
