@@ -47,6 +47,7 @@
 /* menu mobile */
 .btn-menu-header {
     /* display: none; */
+    width: 30px;
     font-size: 1.8em;
     cursor: pointer;
     background: none;
@@ -68,14 +69,13 @@
 
 .menu-mobile {
     position: fixed;
-    bottom: 0;
     left: -250px;
     width: 250px;
-    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
     background-color: var(--verde-escuro);
     padding: 20px;
     transition: left 0.3s;
-    z-index: 900;
+    z-index: 1000;
     overflow-y: auto;
 }
 
@@ -89,11 +89,12 @@
     left: 0;
 }
 
-/* .sections {
+/* efeito de arrastar main para o lado quando estiver ativo */
+/* .main {
   transition: transform 0.3s ease;
 }
 
-.menu-mobile.open ~ .sections {
+.menu-mobile.open ~ .main {
   transform: translateX(250px);
 } */
 
@@ -116,8 +117,9 @@
         flex-direction: column;
     }
 
-    /* .menu-mobile.open ~ .sections {
-        transform: translateX(20%);
+    /* efeito de arrastar main para o lado quando estiver ativo */
+    /* .menu-mobile.open ~ .main {
+        transform: translateX(65%);
     } */
 }
 
