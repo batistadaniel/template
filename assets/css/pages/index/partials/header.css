@@ -75,7 +75,7 @@
     background-color: var(--verde-escuro);
     padding: 20px;
     transition: left 0.3s;
-    z-index: 1000;
+    z-index: 900;
     overflow-y: auto;
 }
 
